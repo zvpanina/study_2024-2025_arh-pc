@@ -160,36 +160,36 @@ git push origin имя_ветки или git push
 4.1. Настройка github 
 Я создала учётную запись на сайте https://github.com/ и заполнила основные данные. (рис. 1)
  
-![Рис. 1. Создание учётной записи в Github](/home/zvpanina/work/study/2024-2025/Архитектура компьютера/arch-pc/labs/lab02/report/image/1.jpg)
+![Рис. 1. Создание учётной записи в Github](/home/zvpanina/work/study/2024-2025/Архитектура компьютера/arch-pc/labs/lab02/report/image/1.jpg){#fig:001 width=70%}
 
 4.2. Базовая настройка git 
 Сначала сделаем предварительную конфигурацию git. Открываю терминал и ввожу следующие команды, указав своё имя и email (рис. 2)
  
-![Рис. 2. Предварительная конфигурация git](/home/zvpanina/work/study/2024-2025/Архитектура компьютера/arch-pc/labs/lab02/report/image/2.jpg)
+![Рис. 2. Предварительная конфигурация git](/home/zvpanina/work/study/2024-2025/Архитектура компьютера/arch-pc/labs/lab02/report/image/2.jpg){#fig:002 width=70%}
 
 Настроим utf-8 в выводе сообщений git, зададим имя начальной ветки (будем называть её master); параметр autocrlf; параметр safecrlf (рис. 3)
   
-![Рис.3. Настройка соответствующих параметров](/home/zvpanina/work/study/2024-2025/Архитектура компьютера/arch-pc/labs/lab02/report/image/3.jpg)
+![Рис.3. Настройка соответствующих параметров](/home/zvpanina/work/study/2024-2025/Архитектура компьютера/arch-pc/labs/lab02/report/image/3.jpg){#fig:003 width=70%}
 4.3. Создание SSH ключа
 Для последующей идентификации пользователя на сервере репозиториев генерирую пару ключей (приватный и открытый)(рис. 4).
  
-![Рис. 4. Создание SSH ключа](/home/zvpanina/work/study/2024-2025/Архитектура компьютера/arch-pc/labs/lab02/report/image/4.jpg)
+![Рис. 4. Создание SSH ключа](/home/zvpanina/work/study/2024-2025/Архитектура компьютера/arch-pc/labs/lab02/report/image/4.jpg){#fig:004 width=70%}
  Далее мне необходимо загрузить сгенерированный открытый ключ. Для этого захожу на сайт http://github.org/ под своей учётной записью и перехожу в меню Settings . После этого выбираю в боковом меню SSH and GPG keys и нажимаю кнопку New SSH key (рис. 5). 
  
-![Рис. 5. Меню SSH and GPG keys](/home/zvpanina/work/study/2024-2025/Архитектура компьютера/arch-pc/labs/lab02/report/image/5.jpg)
+![Рис. 5. Меню SSH and GPG keys](/home/zvpanina/work/study/2024-2025/Архитектура компьютера/arch-pc/labs/lab02/report/image/5.jpg){#fig:005 width=70%}
 Скопировав из локальной консоли ключ в буфер обмена cat ~/.ssh/id_rsa.pub | xclip -sel clip нужно вставить ключ в появившееся на сайте поле и указать для ключа имя (Title).(рис. 6)  
 
-![Рис. 6. Предложение установки xclip](/home/zvpanina/work/study/2024-2025/Архитектура компьютера/arch-pc/labs/lab02/report/image/6.jpg)
+![Рис. 6. Предложение установки xclip](/home/zvpanina/work/study/2024-2025/Архитектура компьютера/arch-pc/labs/lab02/report/image/6.jpg){#fig:006 width=70%}
 Как я поняла, введя эту команду, мне сначала нужно установить утилиту xclip. (рис. 7)
  
-![Рис. 7. Установка xclip]](/home/zvpanina/work/study/2024-2025/Архитектура компьютера/arch-pc/labs/lab02/report/image/7.jpg)
+![Рис. 7. Установка xclip]](/home/zvpanina/work/study/2024-2025/Архитектура компьютера/arch-pc/labs/lab02/report/image/7.jpg){#fig:007 width=70%}
 Ввожу команду повторно и вижу, что нужная мне папка не находится, значит, она скрыта, как видно через команду ls –la, т.е. мне нужно использовать права админа (команда sudo) (рис. 8).
  
-![Рис. 8. Ввод команды от имени админа](/home/zvpanina/work/study/2024-2025/Архитектура компьютера/arch-pc/labs/lab02/report/image/8.jpg)
+![Рис. 8. Ввод команды от имени админа](/home/zvpanina/work/study/2024-2025/Архитектура компьютера/arch-pc/labs/lab02/report/image/8.jpg){#fig:008 width=70%}
 
 Далее вставляю ключ в появившееся на сайте поле и указываю для ключа имя (Title).(рис. 9)
  
-![Рис. 9. Ключ создан](/home/zvpanina/work/study/2024-2025/Архитектура компьютера/arch-pc/labs/lab02/report/image/9.jpg)
+![Рис. 9. Ключ создан](/home/zvpanina/work/study/2024-2025/Архитектура компьютера/arch-pc/labs/lab02/report/image/9.jpg){#fig:009 width=70%}
 
 
 
@@ -197,47 +197,47 @@ git push origin имя_ветки или git push
 4.4. Сознание рабочего пространства и репозитория курса на основе шаблона
 Открываю терминал и создаю каталог для предмета «Архитектура компьютера» (рис.10)
  
-![Рис. 10. Создание каталога](/home/zvpanina/work/study/2024-2025/Архитектура компьютера/arch-pc/labs/lab02/report/image/10.jpg)
+![Рис. 10. Создание каталога](/home/zvpanina/work/study/2024-2025/Архитектура компьютера/arch-pc/labs/lab02/report/image/10.jpg){#fig:010 width=70%}
 
 4.5. Сознание репозитория курса на основе шаблона
 Репозиторий на основе шаблона можно создать через web-интерфейс github. Перехожу на страницу репозитория с шаблоном курса https://github.com/yamadharma/course-directory-student-template. Далее выбираю Use this template.(рис.11)
   
-![Рис. 11. Страница репозитория с шаблоном курса](/home/zvpanina/work/study/2024-2025/Архитектура компьютера/arch-pc/labs/lab02/report/image/11.jpg)
+![Рис. 11. Страница репозитория с шаблоном курса](/home/zvpanina/work/study/2024-2025/Архитектура компьютера/arch-pc/labs/lab02/report/image/11.jpg){#fig:011 width=70%}
 
 В открывшемся окне задаю имя репозитория (Repository name) study_2023–2024_arh-pc и создаю репозиторий (рис. 12).
   
-![Рис. 12. Создание репозитория]](/home/zvpanina/work/study/2024-2025/Архитектура компьютера/arch-pc/labs/lab02/report/image/12.jpg)
+![Рис. 12. Создание репозитория]](/home/zvpanina/work/study/2024-2025/Архитектура компьютера/arch-pc/labs/lab02/report/image/12.jpg){#fig:012 width=70%}
 
 Открываю терминал и перехожу в каталог курса.
 cd ~/work/study/2023–2024/"Архитектура компьютера" Клонирую созданный репозиторий (рис. 13)
  
-![Рис. 13. Клонирование созданного репозитория](/home/zvpanina/work/study/2024-2025/Архитектура компьютера/arch-pc/labs/lab02/report/image/13.jpg)
+![Рис. 13. Клонирование созданного репозитория](/home/zvpanina/work/study/2024-2025/Архитектура компьютера/arch-pc/labs/lab02/report/image/13.jpg){#fig:013 width=70%}
 
 4.6. Настройка каталога курса
 Перехожу в каталог курса и удаляю лишние файлы (рис. 14)
  
-![Рис. 14. Удаление лишних файлов](/home/zvpanina/work/study/2024-2025/Архитектура компьютера/arch-pc/labs/lab02/report/image/14.jpg)
+![Рис. 14. Удаление лишних файлов](/home/zvpanina/work/study/2024-2025/Архитектура компьютера/arch-pc/labs/lab02/report/image/14.jpg){#fig:014 width=70%}
 
 Создаю необходимые каталоги(рис. 15)
  
-![Рис.15. Создание каталогов](/home/zvpanina/work/study/2024-2025/Архитектура компьютера/arch-pc/labs/lab02/report/image/15.jpg)
+![Рис.15. Создание каталогов](/home/zvpanina/work/study/2024-2025/Архитектура компьютера/arch-pc/labs/lab02/report/image/15.jpg){#fig:015 width=70%}
 
 Отправляю файлы на сервер(рис. 16)
  
  
-![Рис. 16, 17. Отправка файлов на сервер](/home/zvpanina/work/study/2024-2025/Архитектура компьютера/arch-pc/labs/lab02/report/image/16.jpg)
-![Рис. 16, 17. Отправка файлов на сервер](/home/zvpanina/work/study/2024-2025/Архитектура компьютера/arch-pc/labs/lab02/report/image/17.jpg)
+![Рис. 16, 17. Отправка файлов на сервер](/home/zvpanina/work/study/2024-2025/Архитектура компьютера/arch-pc/labs/lab02/report/image/16.jpg){#fig:016 width=70%}
+![Рис. 16, 17. Отправка файлов на сервер](/home/zvpanina/work/study/2024-2025/Архитектура компьютера/arch-pc/labs/lab02/report/image/17.jpg){#fig:017 width=70%}
 
 Проверяю правильность создания иерархии рабочего пространства в локальном репозитории и на странице github (рис. 18).
    
-![Рис. 18. Иерархия рабочего пространства создана](/home/zvpanina/work/study/2024-2025/Архитектура компьютера/arch-pc/labs/lab02/report/image/18.jpg)
+![Рис. 18. Иерархия рабочего пространства создана](/home/zvpanina/work/study/2024-2025/Архитектура компьютера/arch-pc/labs/lab02/report/image/18.jpg){#fig:018 width=70%}
 
 
  
 4.7. Выполнение заданий для самостоятельной работы
 1.	Создаю отчет по выполнению лабораторной работы в соответствующем каталоге рабочего пространства (labs>lab02>report). (Рис.19)
  
-![Рис.19. Отчет в markdown](/home/zvpanina/work/study/2024-2025/Архитектура компьютера/arch-pc/labs/lab02/report/image/19.jpg)
+![Рис.19. Отчет в markdown](/home/zvpanina/work/study/2024-2025/Архитектура компьютера/arch-pc/labs/lab02/report/image/19.jpg){#fig:019 width=70%}
 2.	Копирую отчеты по выполнению предыдущих лабораторных работ в соответствующие каталоги созданного рабочего пространства.
 
 3. Загружаю файлы на github.
